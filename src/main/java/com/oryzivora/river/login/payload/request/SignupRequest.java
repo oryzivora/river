@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Set;
 @Data
 public class SignupRequest {
@@ -17,7 +18,7 @@ public class SignupRequest {
     @Email
     private String email;
     
-    private Set<String> role;
+//    private List<String> role;
     
     @NotBlank
     @Size(min = 6, max = 40)

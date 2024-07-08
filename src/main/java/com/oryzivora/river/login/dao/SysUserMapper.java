@@ -2,8 +2,8 @@ package com.oryzivora.river.login.dao;
 
 import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.oryzivora.river.login.models.SysRole;
-import com.oryzivora.river.login.models.SysUser;
+import com.oryzivora.river.login.model.SysRole;
+import com.oryzivora.river.login.model.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

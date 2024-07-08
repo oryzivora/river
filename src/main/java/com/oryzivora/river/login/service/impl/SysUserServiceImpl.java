@@ -1,6 +1,6 @@
 package com.oryzivora.river.login.service.impl;
 
-import com.oryzivora.river.login.models.SysUser;
+import com.oryzivora.river.login.model.SysUser;
 import com.oryzivora.river.login.dao.SysUserMapper;
 import com.oryzivora.river.login.service.ISysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

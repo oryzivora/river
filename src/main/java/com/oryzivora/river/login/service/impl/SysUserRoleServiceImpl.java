@@ -1,6 +1,6 @@
 package com.oryzivora.river.login.service.impl;
 
-import com.oryzivora.river.login.models.SysUserRole;
+import com.oryzivora.river.login.model.SysUserRole;
 import com.oryzivora.river.login.dao.SysUserRoleMapper;
 import com.oryzivora.river.login.service.ISysUserRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

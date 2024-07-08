@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,12 +18,12 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
-//@EnableWebSecurity
-@EnableMethodSecurity
+@EnableWebSecurity
+//@EnableMethodSecurity
 //(securedEnabled = true,
 //jsr250Enabled = true,
 //prePostEnabled = true) // by default
-public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig /*extends WebSecurityConfigurerAdapter*/ {
   @Resource
   UserDetailsServiceImpl userDetailsService;
 
@@ -36,8 +36,26 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
   }
 
 //  @Override
-//  public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-//    authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+//  public void configure(HttpSecurity  http) throws Exception {
+//    http.csrf(AbstractHttpConfigurer::disable)
+//            // Disable CSRF (cross site request forgery)
+//
+//
+//            // No session will be created or used by spring security
+////            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+////            .and()
+//
+//            // Entry points
+//            .authorizeRequests()
+//            .antMatchers("/login", "/register", "/public/**").permitAll()
+//            .anyRequest().authenticated()
+//            .and()
+//
+//            // Apply JWT
+//            .addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+//
+//    // Disable cache
+//    http.headers().cacheControl();
 //  }
 
   @Bean

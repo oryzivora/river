@@ -1,7 +1,7 @@
 package com.oryzivora.river.login.security.services;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.oryzivora.river.login.models.SysUser;
+import com.oryzivora.river.login.model.SysUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

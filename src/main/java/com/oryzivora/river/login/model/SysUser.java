@@ -1,4 +1,4 @@
-package com.oryzivora.river.login.models;
+package com.oryzivora.river.login.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,28 +26,16 @@ public class SysUser implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键
-     */
     @TableId(value = "id", type = IdType.AUTO)
     @NotBlank
     private Long id;
 
-    /**
-     * 用户名
-     */
     @NotBlank
     private String username;
 
-    /**
-     * 密码
-     */
     @NotBlank
     private String password;
 
-    /**
-     * 邮箱
-     */
     private String email;
 
     @TableField(exist = false)

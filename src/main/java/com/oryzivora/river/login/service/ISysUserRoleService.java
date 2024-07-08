@@ -1,6 +1,6 @@
 package com.oryzivora.river.login.service;
 
-import com.oryzivora.river.login.models.SysUserRole;
+import com.oryzivora.river.login.model.SysUserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

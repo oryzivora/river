@@ -1,6 +1,6 @@
 package com.oryzivora.river.login.dao;
 
-import com.oryzivora.river.login.models.SysUserRole;
+import com.oryzivora.river.login.model.SysUserRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
